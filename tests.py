@@ -28,6 +28,7 @@ class BookDBTestCase(BookAppTestCase):
             expected = self.db[actual_title['id']]['title']
             self.assertEqual(actual, expected)
 
+    #
     def test_title_info_complete(self):
         use_id, expected = self.db.items()[0]
         actual = self.makeOne().title_info(use_id)
